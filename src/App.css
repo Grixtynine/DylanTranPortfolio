@@ -1,4 +1,3 @@
-/* Make html/body fill the viewport */
 html, body {
   height: 100%;
   margin: 0;
@@ -6,16 +5,21 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* Full-screen background */
 body {
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   background-image: url('./assets/asadal_stock_66.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff;
+  z-index: -1;
 }
 
-/* Overlay to darken background */
 .overlay {
   position: fixed;
   top: 0;
@@ -26,7 +30,6 @@ body {
   z-index: 0;
 }
 
-/* Content on top */
 .content {
   position: relative;
   z-index: 1;
@@ -39,31 +42,55 @@ body {
   text-align: center;
 }
 
-/* Project cards */
 .projects {
-  display: flex;
+  display: flexbox;
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .project-card {
-  background: rgba(132, 255, 247, 0.492);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: #0dbdab87 !important;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 255, 240, 0.3);
-  padding: 20px;
-  box-shadow: 0 0 10px 2px rgba(255,255,255,0.5);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(148,246,255,.3);
+  box-shadow:
+    inset 0 0 20px #94f6ffcc,
+    0 0 50px #0000004d;
+  text-align: center;
+  padding: 30px;
+  border-radius: 25px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  row-gap: 12px;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 10px 4px rgba(255,255,255,0.5);
-  background: rgba(176, 255, 250, 0.5);
+  background: #20eed987 !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(148,246,255,.3);
+  box-shadow:
+    inset 0 0 20px #94f6ffcc,
+    0 0 50px #ffffffd0;
+  text-align: center;
+  transform: scale(1.05);
+  padding: 30px;
+  border-radius: 25px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
 }
 
-/* Button style */
 .button-a {
   display: inline-block;
   margin-top: 1rem;
@@ -82,14 +109,13 @@ body {
   bottom: 20px;
   right: 20px;
   margin-top: 1rem;
-
   overflow-y: auto;
   background: rgba(0, 255, 240, 0.33);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
   border: 1px solid rgba(0, 255, 240, 0.3);
 }
+
 .button-b:hover {
   background: #78f121;
   border: #e0f121;
@@ -97,7 +123,6 @@ body {
 
 .button-a:hover {
   background-color: #21a1f1;
-  
 }
 
 .dialog-root {
@@ -109,8 +134,8 @@ body {
 .dialog-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(2px);
+  background: rgba(145, 142, 142, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .dialog-container {
@@ -124,15 +149,24 @@ body {
 .dialog-panel {
   width: 90vw;
   height: 85vh;
-  
-  padding: 40px;
-  overflow-y: auto;
-  background: rgba(0, 255, 240, 0.33);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background: #0dbdab87 !important;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(0, 255, 240, 0.3);
-
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(148,246,255,.3);
+  box-shadow:
+    inset 0 0 20px #94f6ffcc,
+    0 0 50px #0000004d;
+  text-align: center;
+  padding: 30px;
+  border-radius: 25px;
+  margin: 40px;
+  min-width: 1000px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 12px;
 }
 
 .dialog-title {
@@ -143,4 +177,63 @@ body {
 
 .dialog-desc {
   margin-bottom: 1rem;
+}
+
+
+.dock-container {
+  position: fixed;
+  left: -1vw;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.dock {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #3549471a !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(148,246,255,.3);
+  box-shadow:
+    inset 0 0 20px #94f6ffcc,
+    0 0 50px #0000004d;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  row-gap: 12px;
+}
+.dock-item {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  transform: translateY(-5px);
+  background: #5eada587 !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(148,246,255,.3);
+  box-shadow:
+    inset 0 0 20px #c3f1f5cc,
+    0 0 50px #ffffffd0;
+  text-align: center;
+
+
+}
+
+.dock-item img.dock-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
 }
