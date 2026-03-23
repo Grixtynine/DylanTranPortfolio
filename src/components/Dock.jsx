@@ -1,17 +1,17 @@
 import { useState } from "react";
 import DockItem from "./DockItem";
 import testImg from "../assets/asadal_stock_66.jpg";
+import { Link } from "react-router-dom";
 
 export default function Dock() {
   const [mouseY, setMouseY] = useState(null);
 
   const items = [
-    { id: 1, icon: "🏠" },
+    { id: 1, icon: "🏠" , path: "/"},
     { id: 2, icon: "📁" },
-    { id: 3, icon: "🖥" },
+    { id: 3, icon: "🖥" , path: "Gamedev"},
     { id: 4, icon: "⚙️" },
     { id: 5, icon: "📧" },
-    { id: 6, icon: testImg, alt: "Test" },  // <-- imported image
     { id: 7, icon: "📧" },
     { id: 8, icon: "📧" },
     { id: 9, icon: "📧" },
@@ -32,6 +32,7 @@ export default function Dock() {
             key={item.id}
             icon={item.icon}
             alt={item.alt}
+            path={item.path}
             mouseY={mouseY}
           />
         ))}

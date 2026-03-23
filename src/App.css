@@ -29,6 +29,9 @@ body::before {
   background-color: rgba(0,0,0,0.5);
   z-index: 0;
 }
+:root {
+  --dock-width: 100px;
+}
 
 .content {
   position: relative;
@@ -36,17 +39,22 @@ body::before {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+  justify-self: start;
+  padding-right: 200px;
   text-align: center;
+  padding-left: calc(var(--dock-width) + 20px);
+  width: 95vw;
+  background-color: #000;
+
 }
+  
+
 
 .projects {
-  display: flexbox;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: left;
+  margin-right: 50px;
 }
 
 .project-card {
@@ -59,8 +67,9 @@ body::before {
     0 0 50px #0000004d;
   text-align: center;
   padding: 30px;
+
   border-radius: 25px;
-  margin: 40px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,6 +195,7 @@ body::before {
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
+  width: 150px;
 }
 
 .dock {

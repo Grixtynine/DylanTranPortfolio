@@ -1,9 +1,6 @@
-export default function ProjectCard({ title, width, height }) {
+export default function ProjectCard({ title, onClick }) {
   return (
-    <div
-      className="project-card"
-      style={{ width: width, height: height }}
-    >
+    <div className="project-card" onClick={onClick}>
       <h2>{title}</h2>
       <button className="button-a">Open</button>
     </div>
