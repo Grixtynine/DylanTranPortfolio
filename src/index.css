@@ -1,7 +1,6 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Basenji';
+
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -12,6 +11,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+@font-face {
+  font-family: 'Basenji';
+  src: url(./assets/Basenji-SemiBold.otf) format('opentype'); /* url of the font */
+}
+
+
 
 a {
   font-weight: 500;
