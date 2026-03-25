@@ -54,9 +54,12 @@ function Home({ setIsModalOpen }) {
 
       {!isOpen && (
         <div className="content">
-          <h1>All Projects</h1>
+
 
           <div className="projects">
+            <div className="projectheader">
+              <h1>All Projects</h1>
+            </div>
             {projects.map((p, i) => (
               <div key={i} onClick={() => openDialog(p)}>
                 <ProjectCard title={p.title} />
@@ -132,9 +135,12 @@ function GameDev({ setIsModalOpen }) {
 
       {!isOpen && (
         <div className="content">
-          <h1>Game Assets</h1>
+
 
           <div className="projects">
+            <div className="projectheader">
+              <h1>All Projects</h1>
+            </div>
             {projects.map((p, i) => (
               <div key={i} onClick={() => openDialog(p)}>
                 <ProjectCard title={p.title} />  
@@ -194,8 +200,8 @@ function App() {
         <div className="page-content">
           <Routes>
             <Route path="/" element={<Home setIsModalOpen={setIsModalOpen} />} />
-            <Route path="/gamedev" element={<GameDev />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/gamedev" element={<GameDev setIsModalOpen={setIsModalOpen} />} />
+            <Route path="/contact" element={<Contact setIsModalOpen={setIsModalOpen} />} />
           </Routes>
         </div>
       </div>

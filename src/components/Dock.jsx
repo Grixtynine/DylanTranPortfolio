@@ -11,7 +11,9 @@ export default function Dock() {
 
   const items = [
     { id: 1, icon: homeImg, path: "/" },
-
+    { id: 1, icon: homeImg, path: "/" },
+    { id: 1, icon: homeImg, path: "/" },
+    { id: 1, icon: homeImg, path: "/" },
     { id: 3, icon: GameAssetImg, path: "/GameDev" },
     { id: 5, icon: contactImg, path: "/contact" },
   ];
