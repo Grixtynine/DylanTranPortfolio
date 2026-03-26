@@ -10,12 +10,12 @@ export default function Dock() {
   const [mouseY, setMouseY] = useState(null);
 
   const items = [
+    { id: 1, icon: homeImg, path: "/" , tag: "Home"},
     { id: 1, icon: homeImg, path: "/" },
     { id: 1, icon: homeImg, path: "/" },
     { id: 1, icon: homeImg, path: "/" },
-    { id: 1, icon: homeImg, path: "/" },
-    { id: 3, icon: GameAssetImg, path: "/GameDev" },
-    { id: 5, icon: contactImg, path: "/contact" },
+    { id: 3, icon: GameAssetImg, path: "/GameDev" , tag: "Game Assets"},
+    { id: 5, icon: contactImg, path: "/contact" , tag: "Contact"},
   ];
 
   return (
@@ -31,6 +31,7 @@ export default function Dock() {
             icon={item.icon}
             path={item.path}
             mouseY={mouseY}
+            tag={item.tag}
           />
         ))}
       </div>

@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function DockItem({ icon, alt, mouseY, path }) {
+export default function DockItem({ icon, alt, mouseY, path, tag }) {
   const ref = useRef(null);
   const [scale, setScale] = useState(1);
   const navigate = useNavigate();
@@ -54,6 +54,8 @@ export default function DockItem({ icon, alt, mouseY, path }) {
       ) : (
         <span style={{ fontSize: "24px" }}>{icon}</span>
       )}
+  
+      <span className="dock-label">{tag}</span>
     </div>
   );
 }

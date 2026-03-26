@@ -17,7 +17,7 @@ function WeatherApp() {
 function Home({ setIsModalOpen }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
-
+  
   const projects = [
     {
       title: "About",
@@ -50,6 +50,7 @@ function Home({ setIsModalOpen }) {
 
   return (
     <>
+
       <div className="overlay"></div>
 
       {!isOpen && (
@@ -58,7 +59,9 @@ function Home({ setIsModalOpen }) {
 
           <div className="projects">
             <div className="projectheader">
-              <h1>All Projects</h1>
+              <svg className="headertxt">
+                <text fill="#ffffff" font-size="45" font-family="Excelorate" x="50%" y="20%">All Projects</text>
+              </svg>
             </div>
             {projects.map((p, i) => (
               <div key={i} onClick={() => openDialog(p)}>
