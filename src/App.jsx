@@ -32,7 +32,7 @@ function Home({ setIsModalOpen }) {
         </div>
       ),
     },
-    { title: "Todo App", content: <p>This is the Todo App project content.</p> },
+    { title: "", content: <p>This is the Todo App project content.</p> },
     { title: "Weather App", content: <p>This is the Weather App project content.</p> },
     { title: "Game Dev", content: <p>This is the Game Dev project content.</p> },
   ];
@@ -59,9 +59,23 @@ function Home({ setIsModalOpen }) {
 
           <div className="projects">
             <div className="projectheader">
-              <svg className="headertxt">
-                <text fill="#ffffff" font-size="45" font-family="Excelorate" x="50%" y="20%">All Projects</text>
-              </svg>
+
+              
+            <svg className="headertxt" width="100%" height="100%">
+              <text
+                x="50%"
+                y="50%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                fill="#ffffff"
+                fontSize="45"
+                fontFamily="Excelorate"
+              >
+                All Projects
+              </text>
+            </svg>
+
+
             </div>
             {projects.map((p, i) => (
               <div key={i} onClick={() => openDialog(p)}>
