@@ -72,7 +72,8 @@ function Home() {
   return (
     <>
       <div className="overlay" />
-
+      <div className="viewport-fade"/>
+      
       <div className="page">
         <div className="layout">
           <Dock />
@@ -96,6 +97,8 @@ function Home() {
           </div>
         </div>
       </div>
+
+
 
       <Dialog open={isOpen} onClose={closeDialog}>
         <DialogBackdrop className="dialog-backdrop" />
@@ -164,7 +167,7 @@ function GameDev() {
   return (
     <>
       <div className="overlay" />
-
+      <div className="viewport-fade"/>
       <div className="page">
         <div className="layout">
           <Dock />
@@ -220,7 +223,7 @@ function Contact() {
   return (
     <>
       <div className="overlay" />
-
+      <div className="viewport-fade"/>
       <div className="page">
         <div className="layout">
           <Dock />
@@ -228,10 +231,35 @@ function Contact() {
           <div className="gallery">
             <div className="project-card contact-card">
               <div className="contact-content">
+                <h1>About me</h1>
+                <p>Hello! I am a graphic design and game development student. I'm working on an indie game, but I hope to find work in the meantime.</p>
+                <p>Software proficiency:</p>
+                <ul>
+                  <li>Blender: Great at modelling, still learning UVs, texturing, and advanced rigging/animation</li>
+                  <li>Adobe Illustrator: My strongest software, I have done hundreds of hours of work in Illustrator on different types of projects</li>
+                  <li>Adobe InDesign: another program I have used extensively, I have made brochures, flyers, forms and more.</li>
+                  <li>Adobe Photoshop: Very solid skills in image retouching, but I haven't used it for designs as much.</li>
+                  <li>Microsoft and Google software suites: extremely proficient, I use these almost daily.</li>
+                  <li>Other: Affinity Designer and GIMP, both of which I used until I had access to the Adobe counterparts.</li>
+                </ul>
+
+                <p>Programming Languages</p>
+                <ul>
+                  <li>HTML + CSS: this website was done by me (using react as well) and I have used them in other projects, but I would not claim to be an expert.</li>
+                  <li>gdscript: the primary language I use for game development. Not the greatest at this but I am always learning.</li>
+                  <li>Python: I used the simpler functions to program a robot for state and county robotics competitions.</li>
+                </ul>
+                
                 <h1>Contact</h1>
-                <p>Email: example@email.com</p>
-                <p>Location: Texas</p>
-                <p>Available for freelance and collaboration work.</p>
+                <p>Email: grixyirlaz7@gmail.com</p>
+                <p>ArtStation: grix.artstation.com</p>
+                <p>Availability: Part-time and Contract.</p>
+                <br></br>
+                <h1>Education</h1>
+                <ul>
+                <li>Tarrant County College - Associates of Applied Science - Graphic Communication, expected May 2027</li>
+                <li>Tarrant County College - Associates of Applied Science - Game and Simulation Design, expected May 2027</li>
+                </ul>
               </div>
             </div>
           </div>

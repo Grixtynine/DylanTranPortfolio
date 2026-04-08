@@ -18,7 +18,7 @@ export default function DockItem({ icon, alt, mouseY, path, tag }) {
     const distance = mouseY - centerY;
     const absDistance = Math.abs(distance);
 
-    const maxDistance = 75;
+    const maxDistance = 45; //scaleonhover
 
     let newScale = 1;
     if (absDistance < maxDistance) {

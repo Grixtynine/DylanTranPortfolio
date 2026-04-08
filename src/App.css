@@ -5,8 +5,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-family: "Excelorate", sans-serif;
   justify-content: center;
+  scrollbar-width: none;
 }
 
 html {
@@ -15,7 +15,7 @@ html {
 
 #root {
   height: 100%;
-  font-family: "Excelorate", sans-serif;
+  font-family: "Noto", sans-serif;
 }
 
 :root {
@@ -35,14 +35,14 @@ html {
 
 body {
   color: #fff;
-  font-family: "Excelorate", sans-serif;
+  font-family: "Noto", sans-serif;
 }
 
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("./assets/asadal_stock_66.jpg");
+  background-image: url("./assets/windows_xp_46.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,10 @@ body::before {
   inset: 0;
   background-color: rgba(45, 89, 92, 0.5);
   z-index: 0;
+  backdrop-filter: blur(3px);
 }
+
+
 
 .app-layout {
   min-height: 100vh;
@@ -71,40 +74,24 @@ body::before {
   box-sizing: border-box;
   gap: 60px;
 }
-
+.viewport-fade {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 27, 94, 1) -1%,
+    transparent 8%,
+    transparent 94%,
+  rgba(0, 91, 216, 0.95) 101%
+  );
+}
 .dock {
   width: 120px;
-  height: calc(100vh - 80px);
+  height: calc(60vh - 110px);
   position: sticky;
-  top: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  border-radius: 25px;
-  background: rgba(53, 73, 71, 0.1);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(148, 246, 255, 0.3);
-}
-
-.dock-item {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  background: rgba(94, 173, 165, 0.5);
-  border: 1px solid rgba(148, 246, 255, 0.3);
-  position: relative;
-}
-
-.dock {
-  width: 120px;
-  height: calc(100vh - 80px);
-  position: sticky;
-  top: 40px;
+  top: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,6 +116,7 @@ body::before {
   position: relative;
   flex-shrink: 0;
   overflow: visible;
+  box-shadow: 0px 2px 10px 1px #1febe0;
 }
 
 .dock-icon {
@@ -143,30 +131,28 @@ body::before {
   left: 100%;
   top: 50%;
   transform: translate(12px, -50%);
-
   white-space: nowrap;
-
   padding: 6px 10px;
   border-radius: 8px;
-
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(6px);
-
   font-size: 12px;
   color: white;
-
   opacity: 0;
   visibility: hidden;
-
   pointer-events: none;
-
   z-index: 9999;
+}
+
+.dock-item:hover {
+  box-shadow: 0px 2px 10px 1px #ffffff;
 }
 
 .dock-item:hover .dock-label {
   opacity: 1;
   visibility: visible;
 }
+
 .page {
   display: flex;
   width: 100%;
@@ -182,14 +168,15 @@ body::before {
 
 .gallery {
   flex: none;
-  width: min(700px, 90vw);
+  width: min(800px, 80vw);
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 40px 20px;
   overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  height: 100%;
+  box-sizing: border-box;
+  scrollbar-width: none; /* add this */
 }
 
 .gallery::-webkit-scrollbar {
@@ -205,8 +192,6 @@ body::before {
   background: rgba(13, 189, 171, 0.5);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(148, 246, 255, 0.3);
-  box-shadow: inset 0 0 20px rgba(148, 246, 255, 0.8),
-              0 0 50px rgba(0, 0, 0, 0.3);
   transition: transform 0.25s ease;
   box-sizing: border-box;
   padding: 15px;
@@ -242,7 +227,6 @@ body::before {
   left: 0;
   right: 0;
   padding: 12px;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
   color: white;
 }
 
