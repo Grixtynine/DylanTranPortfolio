@@ -129,18 +129,40 @@ function Home() {
   );
 }
 
-function GameDev() {
+function GraphicDesign() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
 
   const projects = [
     {
-      title: "Blacksmith Tileset",
-      content: <p>Asset pack.</p>
+      title: "Virtual booths",
+      imgurl: contactImg,
+      imgalt: "Virtual booths",
+      content: <p>Virtual booths project details.</p>
     },
     {
-      title: "Procedural Map",
-      content: <p>Generation system.</p>
+      title: "Access to dashboard",
+      imgurl: contactImg,
+      imgalt: "Access to dashboard",
+      content: <p>Dashboard project details.</p>
+    },
+    {
+      title: "Lead retrieval",
+      imgurl: contactImg,
+      imgalt: "Lead retrieval",
+      content: <p>Lead retrieval project details.</p>
+    },
+    {
+      title: "Lead scoring",
+      imgurl: contactImg,
+      imgalt: "Lead scoring",
+      content: <p>Lead scoring project details.</p>
+    },
+    {
+      title: "Sponsored sections",
+      imgurl: contactImg,
+      imgalt: "Sponsored sections",
+      content: <p>Sponsored sections project details.</p>
     }
   ];
 
@@ -168,6 +190,7 @@ function GameDev() {
     <>
       <div className="overlay" />
       <div className="viewport-fade"/>
+      
       <div className="page">
         <div className="layout">
           <Dock />
@@ -183,12 +206,16 @@ function GameDev() {
               <ProjectCard
                 key={i}
                 title={p.title}
+                imgurl={p.imgurl}
+                imgalt={p.imgalt}
                 onClick={() => openDialog(p)}
               />
             ))}
           </div>
         </div>
       </div>
+
+
 
       <Dialog open={isOpen} onClose={closeDialog}>
         <DialogBackdrop className="dialog-backdrop" />
@@ -218,6 +245,125 @@ function GameDev() {
     </>
   );
 }
+
+
+function GameDev() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
+
+  const projects = [
+    {
+      title: "Virtual booths",
+      imgurl: contactImg,
+      imgalt: "Virtual booths",
+      content: <p>Virtual booths project details.</p>
+    },
+    {
+      title: "Access to dashboard",
+      imgurl: contactImg,
+      imgalt: "Access to dashboard",
+      content: <p>Dashboard project details.</p>
+    },
+    {
+      title: "Lead retrieval",
+      imgurl: contactImg,
+      imgalt: "Lead retrieval",
+      content: <p>Lead retrieval project details.</p>
+    },
+    {
+      title: "Lead scoring",
+      imgurl: contactImg,
+      imgalt: "Lead scoring",
+      content: <p>Lead scoring project details.</p>
+    },
+    {
+      title: "Sponsored sections",
+      imgurl: contactImg,
+      imgalt: "Sponsored sections",
+      content: <p>Sponsored sections project details.</p>
+    }
+  ];
+
+  const openDialog = (project) => {
+    setActiveProject(project);
+    setIsOpen(true);
+  };
+
+  const closeDialog = () => {
+    setIsOpen(false);
+    setActiveProject(null);
+  };
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    if (isOpen) {
+      root.style.overflow = "hidden";
+    } else {
+      root.style.overflow = "";
+    }
+  }, [isOpen]);
+
+  return (
+    <>
+      <div className="overlay" />
+      <div className="viewport-fade"/>
+      
+      <div className="page">
+        <div className="layout">
+          <Dock />
+
+          <div
+            className="gallery"
+            style={{
+              opacity: isOpen ? 0 : 1,
+              pointerEvents: isOpen ? "none" : "auto"
+            }}
+          >
+            {projects.map((p, i) => (
+              <ProjectCard
+                key={i}
+                title={p.title}
+                imgurl={p.imgurl}
+                imgalt={p.imgalt}
+                onClick={() => openDialog(p)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+
+      <Dialog open={isOpen} onClose={closeDialog}>
+        <DialogBackdrop className="dialog-backdrop" />
+
+        <div className="dialog-container">
+          <DialogPanel className="dialog-panel">
+            {activeProject && (
+              <>
+                <DialogTitle className="dialog-title">
+                  {activeProject.title}
+                </DialogTitle>
+
+                <Description>
+                  {activeProject.title} details
+                </Description>
+
+                <div>{activeProject.content}</div>
+
+                <button className="button-b" onClick={closeDialog}>
+                  Close
+                </button>
+              </>
+            )}
+          </DialogPanel>
+        </div>
+      </Dialog>
+    </>
+  );
+}
+
 
 function Contact() {
   return (
@@ -255,10 +401,11 @@ function Contact() {
                 <p>ArtStation: grix.artstation.com</p>
                 <p>Availability: Part-time and Contract.</p>
                 <br></br>
+                
                 <h1>Education</h1>
                 <ul>
-                <li>Tarrant County College - Associates of Applied Science - Graphic Communication, expected May 2027</li>
-                <li>Tarrant County College - Associates of Applied Science - Game and Simulation Design, expected May 2027</li>
+                <li>Tarrant County College - AAS - Graphic Communication, expected May 2027</li>
+                <li>Tarrant County College - AAS - Game and Simulation Design, expected May 2027</li>
                 </ul>
               </div>
             </div>
