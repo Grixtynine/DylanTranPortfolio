@@ -17,7 +17,7 @@ export default function Dock() {
     { id: 1, icon: GraphicDesignImg, path: "/graphicdesign", tag: "Graphic design" },
     { id: 1, icon: SchoolProjImg, path: "/schoolprojects", tag: "School Projects" },
     { id: 3, icon: GameAssetImg, path: "/gamedev" , tag: "Game Assets"},
-    { id: 5, icon: contactImg, path: "/contact" , tag: "Contact"},
+    { id: 5, icon: contactImg, path: "/contact" , tag: "About and Contact"},
   ];
 
   return (
