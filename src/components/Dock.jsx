@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 // import your images
 import homeImg from "../assets/globe.png";
-import contactImg from "../assets/contact.png";
+import contactImg from "../assets/resume.png";
 import GameAssetImg from "../assets/gameasset.png";
 import GraphicDesignImg from "../assets/design.png";
-import SchoolProjImg from "../assets/";
+import SchoolProjImg from "../assets/generalart.png";
   
 export default function Dock() {
   const [mouseY, setMouseY] = useState(null);
