@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import homeImg from "../assets/globe.png";
 import contactImg from "../assets/contact.png";
 import GameAssetImg from "../assets/gameasset.png";
-import GraphicDesignImg from "../assets/";
+import GraphicDesignImg from "../assets/design.png";
 import SchoolProjImg from "../assets/";
   
 export default function Dock() {
