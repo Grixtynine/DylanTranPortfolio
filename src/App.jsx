@@ -253,22 +253,22 @@ function SchoolProjects() {
 
   const projects = [
     {
-      title: "Virtual booths",
+      title: "Gila Monster",
       imgurl: contactImg,
-      imgalt: "Virtual booths",
-      content: <p>Virtual booths project details.</p>
+      imgalt: "Gila Monster",
+      content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>
     },
     {
-      title: "Access to dashboard",
+      title: "Butterfly Brochure",
       imgurl: contactImg,
-      imgalt: "Access to dashboard",
-      content: <p>Dashboard project details.</p>
+      imgalt: "Butterfly Brochure",
+      content: <p>This is a museum brochure with a die cut cover, to show a caterpillar underneath. I had to recreate the map and all the butterflies as well as arrange the text. All done in Illustrator.</p>
     },
     {
-      title: "Lead retrieval",
+      title: "Fallen Soldier",
       imgurl: contactImg,
-      imgalt: "Lead retrieval",
-      content: <p>Lead retrieval project details.</p>
+      imgalt: "Fallen Soldier Composition",
+      content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme. </p>
     },
     {
       title: "Lead scoring",
