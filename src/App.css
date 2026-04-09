@@ -89,7 +89,7 @@ body::before {
 }
 .dock {
   width: 120px;
-  height: calc(60vh - 110px);
+  height: calc(51vh - 110px);
   position: sticky;
   top: 15vh;
   display: flex;
@@ -195,10 +195,13 @@ body::before {
   transition: transform 0.25s ease;
   box-sizing: border-box;
   padding: 15px;
+    box-shadow: 0px 0px 12px 1px #1febe0;
+
 }
 
 .project-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
+  box-shadow: 0px 0px 12px 1px #ffffff;
 }
 
 .project-card img {
@@ -209,7 +212,7 @@ body::before {
 }
 
 .project-card:hover img {
-  transform: scale(1.03);
+  transform: scale(1.01);
 }
 
 .project-card h1,
@@ -266,21 +269,46 @@ body::before {
   cursor: pointer;
 }
 
-.project-card.static-card {
+
+.contact-card {
   cursor: default;
   pointer-events: none;
-  display: flex;
+  align-self: center;
   align-items: center;
+  justify-self: center;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 5vh;
   width: 100%;
-  background: rgba(13, 189, 171, 0.35);
-  padding: 15px;
+
 }
 
-.project-card.static-card .static-content {
+.con-card.content-card .contact-content {
   width: 100%;
   max-width: 600px;
   text-align: left;
   pointer-events: auto;
+  
 }
+.con-card {
+  position: relative;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(13, 189, 171, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 246, 255, 0.3);
+
+  box-sizing: border-box;
+  padding: 25px;
+  padding-top: 0px;
+  height:90%;
+  box-shadow: 0px 0px 10px 1px #1febe0;
+
+  margin-top: 30px;
+}
+
+.con-card p {
+  margin: 0;
+  padding: 0;
+  word-break: break-word;
+  }

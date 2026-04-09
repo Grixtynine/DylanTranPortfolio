@@ -491,7 +491,8 @@ function Contact() {
           <Dock />
 
           <div className="gallery">
-            <div className="project-card contact-card">
+            <div className="con-card">
+            <div className="contact-card">
               <div className="contact-content">
                 <h1>About me</h1>
                 <p>Hello! I am a graphic design and game development student. I'm working on an indie game, but I hope to find work in the meantime.</p>
@@ -524,6 +525,7 @@ function Contact() {
                 <li>Tarrant County College - AAS - Game and Simulation Design, expected May 2027</li>
                 </ul>
               </div>
+            </div>
             </div>
           </div>
         </div>
