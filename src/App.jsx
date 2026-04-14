@@ -11,7 +11,7 @@ import {
 import { useState, useEffect } from "react";
 import Dock from "./components/Dock";
 import contactImg from "./assets/contact.png";
-
+import gilaImg from "./assets/gilaMonster.png"
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
@@ -76,7 +76,7 @@ function Home() {
       
       <div className="page">
         <div className="layout">
-          <Dock />
+          {!isOpen && <Dock />}
 
           <div
             className="gallery"
@@ -118,7 +118,7 @@ function Home() {
                 <div>{activeProject.content}</div>
 
                 <button className="button-b" onClick={closeDialog}>
-                  Close
+                  Back
                 </button>
               </>
             )}
@@ -193,7 +193,7 @@ function GraphicDesign() {
       
       <div className="page">
         <div className="layout">
-          <Dock />
+          {!isOpen && <Dock />}
 
           <div
             className="gallery"
@@ -235,7 +235,7 @@ function GraphicDesign() {
                 <div>{activeProject.content}</div>
 
                 <button className="button-b" onClick={closeDialog}>
-                  Close
+                  Back
                 </button>
               </>
             )}
@@ -254,7 +254,7 @@ function SchoolProjects() {
   const projects = [
     {
       title: "Gila Monster",
-      imgurl: contactImg,
+      imgurl: gilaImg,
       imgalt: "Gila Monster",
       content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>
     },
@@ -311,7 +311,7 @@ function SchoolProjects() {
       
       <div className="page">
         <div className="layout">
-          <Dock />
+          {!isOpen && <Dock />}
 
           <div
             className="gallery"
@@ -353,7 +353,7 @@ function SchoolProjects() {
                 <div>{activeProject.content}</div>
 
                 <button className="button-b" onClick={closeDialog}>
-                  Close
+                  Back
                 </button>
               </>
             )}
@@ -428,7 +428,7 @@ function GameDev() {
       
       <div className="page">
         <div className="layout">
-          <Dock />
+          {!isOpen && <Dock />}
 
           <div
             className="gallery"
@@ -470,7 +470,7 @@ function GameDev() {
                 <div>{activeProject.content}</div>
 
                 <button className="button-b" onClick={closeDialog}>
-                  Close
+                  Back
                 </button>
               </>
             )}

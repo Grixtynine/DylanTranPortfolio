@@ -188,13 +188,14 @@ body::before {
   width: 100%;
   border-radius: 25px;
   overflow: hidden;
+  padding: 25px;
   cursor: pointer;
   background: rgba(13, 189, 171, 0.5);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(148, 246, 255, 0.3);
   transition: transform 0.25s ease;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 25px;
     box-shadow: 0px 0px 12px 1px #1febe0;
 
 }
@@ -206,7 +207,9 @@ body::before {
 
 .project-card img {
   width: 100%;
-  max-width: 100%;
+  margin-bottom: 15px;
+  justify-self: center;
+  border: 5px solid rgb(154, 183, 187);
   display: block;
   border-radius: 12px;
 }
@@ -248,10 +251,17 @@ body::before {
 }
 
 .dialog-panel {
-  background: rgba(20, 20, 20, 0.9);
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 500px;
+  background: rgba(13, 189, 171, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 246, 255, 0.3);
+  transition: transform 0.25s ease;
+  box-sizing: border-box;
+  padding: 25px;
+    box-shadow: 0px 0px 12px 1px #1febe0;
+  border-radius: 25px;
+  max-width: 90%;
+  max-height: 90%;
+  height: 80%;
   width: 90%;
   color: white;
 }
@@ -262,6 +272,7 @@ body::before {
 }
 
 .button-b {
+  align-self: end;
   margin-top: 15px;
   padding: 8px 12px;
   border: none;
