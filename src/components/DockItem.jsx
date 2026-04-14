@@ -22,7 +22,7 @@ export default function DockItem({ icon, alt, mouseY, path, tag }) {
 
     let newScale = 1;
     if (absDistance < maxDistance) {
-      newScale = 1 + (1 - absDistance / maxDistance) * 0.3;
+      newScale = 1 + (1 - absDistance / maxDistance) * 0.35;
     }
 
     setScale(newScale);
