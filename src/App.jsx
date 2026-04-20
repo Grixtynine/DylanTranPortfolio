@@ -337,11 +337,12 @@ function SchoolProjects() {
 
       <Dialog open={isOpen} onClose={closeDialog}>
         <DialogBackdrop className="dialog-backdrop" />
-
+        <div className="imgcont"></div>
         <div className="dialog-container">
           <DialogPanel className="dialog-panel">
             {activeProject && (
               <>
+              <div className="dialog-text">
                 <DialogTitle className="dialog-title">
                   {activeProject.title}
                 </DialogTitle>
@@ -355,6 +356,13 @@ function SchoolProjects() {
                 <button className="button-b" onClick={closeDialog}>
                   Back
                 </button>
+                </div>
+                <div className="dialog-imgcont">
+                  <div className="dialog-img">
+                   <img src={gilaImg}/>
+                  </div>
+                </div>
+
               </>
             )}
           </DialogPanel>
