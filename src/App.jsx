@@ -11,7 +11,8 @@ import {
 import { useState, useEffect } from "react";
 import Dock from "./components/Dock";
 import contactImg from "./assets/contact.png";
-import gilaImg from "./assets/gilaMonster.png"
+import gilaImg from "./assets/gilaMonster.png";
+import soldierImg from "./assets/fallensoldier.png"
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(null);
@@ -266,7 +267,7 @@ function SchoolProjects() {
     },
     {
       title: "Fallen Soldier",
-      imgurl: contactImg,
+      imgurl: soldierImg,
       imgalt: "Fallen Soldier Composition",
       content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme. </p>
     },
@@ -347,9 +348,6 @@ function SchoolProjects() {
                   {activeProject.title}
                 </DialogTitle>
 
-                <Description>
-                  {activeProject.title} details
-                </Description>
 
                 <div>{activeProject.content}</div>
 
@@ -359,7 +357,7 @@ function SchoolProjects() {
                 </div>
                 <div className="dialog-imgcont">
                   <div className="dialog-img">
-                   <img src={gilaImg}/>
+                   <img src={activeProject.imgurl}/>
                   </div>
                 </div>
 
