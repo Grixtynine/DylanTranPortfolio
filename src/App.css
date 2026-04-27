@@ -81,10 +81,10 @@ body::before {
   z-index: 9999;
   background: linear-gradient(
     to bottom,
-    rgba(2, 27, 94, 1) -1%,
-    transparent 8%,
+  rgba(0, 0, 0, 0.85) -10%,
+    transparent 6%,
     transparent 94%,
-  rgba(0, 91, 216, 0.95) 101%
+  rgba(0, 0, 0, 0.555) 102%
   );
 }
 .dock {
@@ -275,7 +275,8 @@ body::before {
   display: grid;
   grid-template-rows: auto 1fr auto;
   color: white;
-  width: 280px;
+  font-size: larger;
+  width: 400px;
   overflow-y: auto;
   max-height: 70vh;
 }
@@ -386,11 +387,12 @@ body::before {
   .carousel img {
     max-height: calc(70vh - 100px);
     width: auto;
-    height: auto;
+
     object-fit: contain;
     border: 5px solid rgb(154, 183, 187);
     border-radius: 12px;
     display: block;
+    height: calc(70vh - 100px);
   }
   
   

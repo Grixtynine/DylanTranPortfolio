@@ -18,8 +18,10 @@ import butterflyImg2 from "./assets/ButterflyBroch2.png";
 import butterflyImg3 from "./assets/ButterflyBroch3.png";
 import butterflyImg4 from "./assets/ButterflyBroch4.png";
 import butterflyImg5 from "./assets/ButterflyBroch5.png";
-import butterflyImg6 from "./assets/ButterflyBroch6.png"
-
+import butterflyImg6 from "./assets/ButterflyBroch6.png";
+import libraryBannerImg from "./assets/LibraryBanner.svg";
+import summerReadingImg from "./assets/BannerSummer.svg";
+import ldplLogoVariationsImg from "./assets/LogoVariations.webp"
 function ImageCarousel({ images }) {
   const [idx, setIdx] = useState(0);
  
@@ -96,10 +98,18 @@ function Home() {
       content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme.</p>
     },
     {
-      title: "Lead scoring",
-      imgurl: contactImg,
-      imgalt: "Lead scoring",
-      content: <p>Lead scoring project details.</p>
+      title: "Lake Dallas Public Library Logo and Banners",
+      imgurl: ldplLogoVariationsImg,
+      imgalt: "Variations of the Lake Dallas Public Library Logo",
+
+      images: [
+        { src: ldplLogoVariationsImg, alt: "Variations of the Lake Dallas Public Library Logo" },
+        { src: summerReadingImg, alt: "Summer Reading Banner" },
+        { src: libraryBannerImg, alt: "General Use Library Banner" },
+
+
+      ],
+      content: <p>This is a set of logo variations I made for the Lake Dallas Public Library that can be placed on differently colored flyers, webpages and more. I was also asked to make a banner for the Summer Reading program and a general use banner to put outside the library.</p>
     },
     {
       title: "Sponsored sections",
@@ -198,10 +208,18 @@ function GraphicDesign() {
  
   const projects = [
     {
-      title: "Gila Monster",
-      imgurl: gilaImg,
-      imgalt: "Gila Monster",
-      content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>
+      title: "Lake Dallas Public Library Logo and Banners",
+      imgurl: ldplLogoVariationsImg,
+      imgalt: "Variations of the Lake Dallas Public Library Logo",
+
+      images: [
+        { src: ldplLogoVariationsImg, alt: "Variations of the Lake Dallas Public Library Logo" },
+        { src: summerReadingImg, alt: "Summer Reading Banner" },
+        { src: libraryBannerImg, alt: "General Use Library Banner" },
+
+
+      ],
+      content: <p>This is a set of logo variations I made for the Lake Dallas Public Library that can be placed on differently colored flyers, webpages and more. I was also asked to make a banner for the Summer Reading program and a general use banner to put outside the library.</p>
     },
     {
       title: "Butterfly Brochure",
