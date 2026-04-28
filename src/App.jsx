@@ -21,7 +21,15 @@ import butterflyImg5 from "./assets/ButterflyBroch5.png";
 import butterflyImg6 from "./assets/ButterflyBroch6.png";
 import libraryBannerImg from "./assets/LibraryBanner.svg";
 import summerReadingImg from "./assets/BannerSummer.svg";
-import ldplLogoVariationsImg from "./assets/LogoVariations.webp"
+import ldplLogoVariationsImg from "./assets/LogoVariations.webp";
+import trashBeforeImg from "./assets/TrashRemovalBefore.jpg";
+import trashAfterImg from "./assets/TrashRemoval.png"
+
+
+
+
+
+
 function ImageCarousel({ images }) {
   const [idx, setIdx] = useState(0);
  
@@ -466,6 +474,127 @@ function SchoolProjects() {
     </>
   );
 }
+
+function PhotoRetouch() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
+ 
+  const projects = [
+
+    {
+      title: "Trash Removal Practice",
+      imgurl: trashAfterImg,
+      imgalt: "Butterfly Brochure cover",
+
+      images: [
+        { src: trashBeforeImg, alt: "Beach with trash" },
+        { src: trashAfterImg, alt: "Beach with trash edited out" },
+      ],
+      content: <p>This is a museum brochure with a die cut cover, to show a caterpillar underneath. I had to recreate the map and all the butterflies as well as arrange the text. All done in Illustrator.</p>
+    },
+    {
+      title: "Fallen Soldier",
+      imgurl: soldierImg,
+      imgalt: "Fallen Soldier Composition",
+      content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme.</p>
+    },
+    {
+      title: "Lead scoring",
+      imgurl: contactImg,
+      imgalt: "Lead scoring",
+      content: <p>Lead scoring project details.</p>
+    },
+    {
+      title: "Sponsored sections",
+      imgurl: contactImg,
+      imgalt: "Sponsored sections",
+      content: <p>Sponsored sections project details.</p>
+    }
+  ];
+ 
+  const openDialog = (project) => {
+    setActiveProject(project);
+    setIsOpen(true);
+  };
+ 
+  const closeDialog = () => {
+    setIsOpen(false);
+    setActiveProject(null);
+  };
+ 
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isOpen) {
+      root.style.overflow = "hidden";
+    } else {
+      root.style.overflow = "";
+    }
+  }, [isOpen]);
+ 
+  // Build the image list: prefer `images` array, fall back to single imgurl
+  const getImages = (project) =>
+    project.images ?? [{ src: project.imgurl, alt: project.imgalt }];
+ 
+  return (
+    <>
+      <div className="overlay" />
+      <div className="viewport-fade"/>
+      
+      <div className="page">
+        <div className="layout">
+          {!isOpen && <Dock />}
+ 
+          <div
+            className="gallery"
+            style={{
+              opacity: isOpen ? 0 : 1,
+              pointerEvents: isOpen ? "none" : "auto"
+            }}
+          >
+            {projects.map((p, i) => (
+              <ProjectCard
+                key={i}
+                title={p.title}
+                imgurl={p.imgurl}
+                imgalt={p.imgalt}
+                onClick={() => openDialog(p)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+ 
+      <Dialog open={isOpen} onClose={closeDialog}>
+        <DialogBackdrop className="dialog-backdrop" />
+        <div className="imgcont"></div>
+        <div className="dialog-container">
+          <DialogPanel className="dialog-panel">
+            {activeProject && (
+              <>
+                <div className="dialog-text">
+                  <DialogTitle className="dialog-title">
+                    {activeProject.title}
+                  </DialogTitle>
+ 
+                  <div>{activeProject.content}</div>
+ 
+                  <button className="button-b" onClick={closeDialog}>
+                    Back
+                  </button>
+                </div>
+ 
+                <div className="dialog-imgcont">
+                    <ImageCarousel images={getImages(activeProject)} />
+                </div>
+              </>
+            )}
+          </DialogPanel>
+        </div>
+      </Dialog>
+    </>
+  );
+}
+ 
  
 function GameDev() {
   const [isOpen, setIsOpen] = useState(false);
@@ -653,6 +782,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/gamedev" element={<GameDev />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/photoretouch" element={<PhotoRetouch />} />
           <Route path="/schoolprojects" element={<SchoolProjects />} />
           <Route path="/graphicdesign" element={<GraphicDesign />} />
         </Routes>

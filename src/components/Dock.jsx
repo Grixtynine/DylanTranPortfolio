@@ -8,16 +8,18 @@ import contactImg from "../assets/resume.png";
 import GameAssetImg from "../assets/gameasset.png";
 import GraphicDesignImg from "../assets/design.png";
 import SchoolProjImg from "../assets/generalart.png";
+import PhotoRetouchImg from "../assets/photoretouch.png"
   
 export default function Dock() {
   const [mouseY, setMouseY] = useState(null);
 
   const items = [
     { id: 1, icon: homeImg, path: "/" , tag: "Home"},
-    { id: 1, icon: GraphicDesignImg, path: "/graphicdesign", tag: "Graphic design" },
-    { id: 1, icon: SchoolProjImg, path: "/schoolprojects", tag: "School Projects" },
-    { id: 3, icon: GameAssetImg, path: "/gamedev" , tag: "Game Assets"},
-    { id: 5, icon: contactImg, path: "/contact" , tag: "About and Contact"},
+    { id: 2, icon: GraphicDesignImg, path: "/graphicdesign", tag: "Graphic design" },
+    { id: 3, icon: SchoolProjImg, path: "/schoolprojects", tag: "School Projects" },
+    { id: 4, icon: PhotoRetouchImg, path: "/photoretouch", tag: "Photo Retouching" },
+    { id: 5, icon: GameAssetImg, path: "/gamedev" , tag: "Game Assets"},
+    { id: 6, icon: contactImg, path: "/contact" , tag: "About and Contact"},
   ];
 
   return (
