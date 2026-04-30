@@ -23,10 +23,10 @@ import libraryBannerImg from "./assets/LibraryBanner.svg";
 import summerReadingImg from "./assets/BannerSummer.svg";
 import ldplLogoVariationsImg from "./assets/LogoVariations.webp";
 import trashBeforeImg from "./assets/TrashRemovalBefore.jpg";
-import trashAfterImg from "./assets/TrashRemoval.png"
-
-
-
+import trashAfterImg from "./assets/TrashRemoval.png";
+import BWmanBeforeImg from "./assets/BWphotoretouchbefore.jpg";
+import BWmanAfterImg from "./assets/BWphotoretouchafter.png";
+import BWmanBothImg from "./assets/BWphotoretouchBoth.png"
 
 
 
@@ -84,6 +84,17 @@ function Home() {
       content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>
     },
     {
+      title: "Trash Removal Practice",
+      imgurl: trashBeforeImg,
+      imgalt: "Butterfly Brochure cover",
+
+      images: [
+        { src: trashBeforeImg, alt: "Beach with trash" },
+        { src: trashAfterImg, alt: "Beach with trash edited out" },
+      ],
+      content: <p>Small personal project to improve my skills at editing out objects from a scene using the clone tool.</p>
+    },
+    {
       title: "Butterfly Brochure",
       imgurl: butterflyImg1,
       imgalt: "Butterfly Brochure cover",
@@ -120,10 +131,16 @@ function Home() {
       content: <p>This is a set of logo variations I made for the Lake Dallas Public Library that can be placed on differently colored flyers, webpages and more. I was also asked to make a banner for the Summer Reading program and a general use banner to put outside the library.</p>
     },
     {
-      title: "Sponsored sections",
-      imgurl: contactImg,
-      imgalt: "Sponsored sections",
-      content: <p>Sponsored sections project details.</p>
+      title: "Restoring black and white photo",
+      imgurl: BWmanBothImg,
+      imgalt: "Black and white photo of man before and after retouching",
+
+      images: [
+        { src: BWmanBeforeImg, alt: "Black and white photo of man before retouching" },
+        { src: BWmanAfterImg, alt: "Black and white photo of man after retouching" },
+        { src: BWmanBothImg, alt: "Black and white photo of man before and after retouching" },
+      ],
+      content: <p>This is a project where I had to clone out dirt, scratches and folds, and extend the background, as well as remove tape with layer adjustments. Parts of the image required a higher level of repair, such as around the eye and chin. </p>
     }
   ];
  
@@ -230,34 +247,26 @@ function GraphicDesign() {
       content: <p>This is a set of logo variations I made for the Lake Dallas Public Library that can be placed on differently colored flyers, webpages and more. I was also asked to make a banner for the Summer Reading program and a general use banner to put outside the library.</p>
     },
     {
+      title: "Gila Monster",
+      imgurl: gilaImg,
+      imgalt: "Gila Monster in Adobe Illustator",
+      content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>
+    },
+    {
       title: "Butterfly Brochure",
-      imgurl: contactImg,
+      imgurl: butterflyImg1,
       imgalt: "Butterfly Brochure cover",
 
       images: [
-        { src: contactImg, alt: "Butterfly Brochure cover" },
-        { src: gilaImg,    alt: "Butterfly Brochure inside spread" },
+        { src: butterflyImg1, alt: "Butterfly Brochure Sheet 1" },
+        { src: butterflyImg2, alt: "Butterfly Brochure Sheet 2" },
+        { src: butterflyImg3, alt: "Butterfly Brochure Sheet 3" },
+        { src: butterflyImg4, alt: "Butterfly Brochure Sheet 4" },
+        { src: butterflyImg5, alt: "Butterfly Brochure Sheet 5" },
+        { src: butterflyImg6, alt: "Butterfly Brochure Sheet 6" },
 
       ],
       content: <p>This is a museum brochure with a die cut cover, to show a caterpillar underneath. I had to recreate the map and all the butterflies as well as arrange the text. All done in Illustrator.</p>
-    },
-    {
-      title: "Fallen Soldier",
-      imgurl: soldierImg,
-      imgalt: "Fallen Soldier Composition",
-      content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme.</p>
-    },
-    {
-      title: "Lead scoring",
-      imgurl: contactImg,
-      imgalt: "Lead scoring",
-      content: <p>Lead scoring project details.</p>
-    },
-    {
-      title: "Sponsored sections",
-      imgurl: contactImg,
-      imgalt: "Sponsored sections",
-      content: <p>Sponsored sections project details.</p>
     }
   ];
  
@@ -379,17 +388,18 @@ function SchoolProjects() {
       content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme.</p>
     },
     {
-      title: "Lead scoring",
-      imgurl: contactImg,
-      imgalt: "Lead scoring",
-      content: <p>Lead scoring project details.</p>
-    },
-    {
-      title: "Sponsored sections",
-      imgurl: contactImg,
-      imgalt: "Sponsored sections",
-      content: <p>Sponsored sections project details.</p>
+      title: "Restoring black and white photo",
+      imgurl: BWmanBothImg,
+      imgalt: "Black and white photo of man before and after retouching",
+
+      images: [
+        { src: BWmanBeforeImg, alt: "Black and white photo of man before retouching" },
+        { src: BWmanAfterImg, alt: "Black and white photo of man after retouching" },
+        { src: BWmanBothImg, alt: "Black and white photo of man before and after retouching" },
+      ],
+      content: <p>This is a project where I had to clone out dirt, scratches and folds, and extend the background, as well as remove tape with layer adjustments. Parts of the image required a higher level of repair, such as around the eye and chin. </p>
     }
+
   ];
  
   const openDialog = (project) => {
@@ -490,25 +500,19 @@ function PhotoRetouch() {
         { src: trashBeforeImg, alt: "Beach with trash" },
         { src: trashAfterImg, alt: "Beach with trash edited out" },
       ],
-      content: <p>This is a museum brochure with a die cut cover, to show a caterpillar underneath. I had to recreate the map and all the butterflies as well as arrange the text. All done in Illustrator.</p>
+      content: <p>Small personal project to improve my skills at editing out objects from a scene using the clone tool.</p>
     },
     {
-      title: "Fallen Soldier",
-      imgurl: soldierImg,
-      imgalt: "Fallen Soldier Composition",
-      content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme.</p>
-    },
-    {
-      title: "Lead scoring",
-      imgurl: contactImg,
-      imgalt: "Lead scoring",
-      content: <p>Lead scoring project details.</p>
-    },
-    {
-      title: "Sponsored sections",
-      imgurl: contactImg,
-      imgalt: "Sponsored sections",
-      content: <p>Sponsored sections project details.</p>
+      title: "Restoring black and white photo",
+      imgurl: BWmanBothImg,
+      imgalt: "Black and white photo of man before and after retouching",
+
+      images: [
+        { src: BWmanBeforeImg, alt: "Black and white photo of man before retouching" },
+        { src: BWmanAfterImg, alt: "Black and white photo of man after retouching" },
+        { src: BWmanBothImg, alt: "Black and white photo of man before and after retouching" },
+      ],
+      content: <p>This is a project where I had to clone out dirt, scratches and folds, and extend the background, as well as remove tape with layer adjustments. Parts of the image required a higher level of repair, such as around the eye and chin. </p>
     }
   ];
  
@@ -606,36 +610,6 @@ function GameDev() {
       imgurl: gilaImg,
       imgalt: "Gila Monster",
       content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>
-    },
-    {
-      title: "Butterfly Brochure",
-      imgurl: contactImg,
-      imgalt: "Butterfly Brochure cover",
-
-      images: [
-        { src: contactImg, alt: "Butterfly Brochure cover" },
-        { src: gilaImg,    alt: "Butterfly Brochure inside spread" },
-
-      ],
-      content: <p>This is a museum brochure with a die cut cover, to show a caterpillar underneath. I had to recreate the map and all the butterflies as well as arrange the text. All done in Illustrator.</p>
-    },
-    {
-      title: "Fallen Soldier",
-      imgurl: soldierImg,
-      imgalt: "Fallen Soldier Composition",
-      content: <p>The final project for my Design 1 class was a designers choice, and I wanted to work with color balancing and contrast. Most of the composition is pencil, with small amounts of paint pen used in the center on the plant. My other goal was to work on the meaning of my art, and I wanted to show a life from death theme.</p>
-    },
-    {
-      title: "Lead scoring",
-      imgurl: contactImg,
-      imgalt: "Lead scoring",
-      content: <p>Lead scoring project details.</p>
-    },
-    {
-      title: "Sponsored sections",
-      imgurl: contactImg,
-      imgalt: "Sponsored sections",
-      content: <p>Sponsored sections project details.</p>
     }
   ];
  
