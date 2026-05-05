@@ -18,11 +18,11 @@ export default function DockItem({ icon, alt, mouseY, path, tag }) {
     const distance = mouseY - centerY;
     const absDistance = Math.abs(distance);
 
-    const maxDistance = 45; //scaleonhover
+    const maxDistance = 80; //distance before scale starts
 
     let newScale = 1;
     if (absDistance < maxDistance) {
-      newScale = 1 + (1 - absDistance / maxDistance) * 0.35;
+      newScale = 1 + (1 - absDistance / maxDistance) * 0.30; //scaleamt
     }
 
     setScale(newScale);
