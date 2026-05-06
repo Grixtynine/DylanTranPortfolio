@@ -21,7 +21,7 @@ import butterflyImg5 from "./assets/ButterflyBroch5.png";
 import butterflyImg6 from "./assets/ButterflyBroch6.png";
 import libraryBannerImg from "./assets/LibraryBanner.svg";
 import summerReadingImg from "./assets/BannerSummer.svg";
-import ldplLogoVariationsImg from "./assets/Logovar.png";
+import ldplLogoVariationsImg from "./assets/logovar.png";
 import trashBeforeImg from "./assets/TrashRemovalBefore.jpg";
 import trashAfterImg from "./assets/TrashRemoval.png";
 import BWmanBeforeImg from "./assets/BWphotoretouchbefore.jpg";
