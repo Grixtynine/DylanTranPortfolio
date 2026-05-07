@@ -30,7 +30,7 @@ import BWmanBothImg from "./assets/BWphotoretouchBoth.png";
 import GrassPxImg from "./assets/GrassPrev.jpg";
 import RockWallPxImg from "./assets/RockWall.jpg";
 import LumbermillPx from "./assets/Lumbermill.jpg";
-import CliffImg from "./assets/CliffTiles.jpg";
+import CliffImg from "./assets/Clifftiles.jpg";
 import Resume from "./assets/ResumeDylanTran.pdf";
 import logoImg from "./assets/Logo.png"
 
