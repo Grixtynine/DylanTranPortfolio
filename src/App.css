@@ -490,3 +490,28 @@ body::before {
         border: 1px solid rgba(148, 246, 255, 0.3);
         color: white;
 }
+
+.PFP {
+  display:block;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 10000;
+
+}
+
+.PFP img{
+      background: rgba(13, 189, 171, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 246, 255, 0.3);
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 12px 1px #1febe0;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: fit-content;
+}

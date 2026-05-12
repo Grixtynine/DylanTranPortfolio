@@ -33,6 +33,7 @@ import LumbermillPx from "./assets/Lumbermill.jpg";
 import CliffImg from "./assets/Clifftiles.jpg";
 import Resume from "./assets/ResumeDylanTran.pdf";
 import logoImg from "./assets/Logo.png"
+import pfpIMG from "./assets/PFP.png"
 
 
 
@@ -778,6 +779,9 @@ function Contact() {
               </div>
             </div>
             </div>
+          </div>
+          <div className="PFP">
+          <img src={pfpIMG}/>
           </div>
         </div>
       </div>
