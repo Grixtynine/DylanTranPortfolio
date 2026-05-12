@@ -10,7 +10,7 @@ import {
 } from "@headlessui/react";
 import { useState, useEffect } from "react";
 import Dock from "./components/Dock";
-import contactImg from "./assets/contact.png";
+
 import gilaImg from "./assets/gilaMonster.png";
 import soldierImg from "./assets/fallensoldier.png";
 import butterflyImg1 from "./assets/ButterflyBroch1.png";
@@ -29,10 +29,8 @@ import BWmanAfterImg from "./assets/BWphotoretouchafter.png";
 import BWmanBothImg from "./assets/BWphotoretouchBoth.png";
 import GrassPxImg from "./assets/GrassPrev.jpg";
 import RockWallPxImg from "./assets/RockWall.jpg";
-import LumbermillPx from "./assets/Lumbermill.jpg";
 import CliffImg from "./assets/Clifftiles.jpg";
 import Resume from "./assets/ResumeDylanTran.pdf";
-import logoImg from "./assets/Logo.png"
 import pfpIMG from "./assets/PFP.png"
 
 
