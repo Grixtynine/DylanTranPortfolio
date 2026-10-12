@@ -31,7 +31,6 @@ import GrassPxImg from "./assets/GrassPrev.jpg";
 import RockWallPxImg from "./assets/RockWall.jpg";
 import CliffImg from "./assets/Clifftiles.jpg";
 import Resume from "./assets/ResumeDylanTran.pdf";
-import pfpIMG from "./assets/PFP.png";
 import jewelry from "./assets/jewelrybeforeafter.png";
 import saxophone from "./assets/sopranosax.png";
 import watch from "./assets/watch.png"
