@@ -871,9 +871,7 @@ function Contact() {
             </div>
             </div>
           </div>
-          <div className="PFP">
-          <img src={pfpIMG}/>
-          </div>
+
         </div>
       </div>
     </>
