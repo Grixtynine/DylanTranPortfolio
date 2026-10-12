@@ -31,9 +31,10 @@ import GrassPxImg from "./assets/GrassPrev.jpg";
 import RockWallPxImg from "./assets/RockWall.jpg";
 import CliffImg from "./assets/Clifftiles.jpg";
 import Resume from "./assets/ResumeDylanTran.pdf";
-import pfpIMG from "./assets/PFP.png"
-
-
+import pfpIMG from "./assets/PFP.png";
+import jewelry from "./assets/jewelrybeforeafter.png";
+import saxophone from "./assets/sopranosax.png";
+import watch from "./assets/watch.png"
 
 function ImageCarousel({ images }) {
   const [idx, setIdx] = useState(0);
@@ -83,11 +84,41 @@ function Home() {
  
   const projects = [
     {
-      title: "Gila Monster",
+      title: "Gila Monster Digital Illustration",
       imgurl: gilaImg,
       imgalt: "Gila Monster in Adobe Illustator",
-      content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>,
+      content: <p>This is a fully scalable Gila Monster made in Adobe Illustrator using the blob brush.</p>,
       tags: <ul className="tags"><li>Adobe Illustrator</li><li>Dec 11, 2025</li></ul>
+    },
+    {
+      title: "Jewelry Retouching",
+      imgurl: jewelry,
+      imgalt: "Photos of Jewelry, before and after retouching",
+      images: [
+        { src: jewelry, alt: "Photos of Jewelry, before and after retouching" },
+      ],
+      content: <p>This is a project where I needed to remove the background and apply adjustments to each stone individually, as well as desaturating the chain metal and adding a drop shadow.</p>,
+      tags: <ul className="tags"><li>Adobe Photoshop</li><li>Oct 5, 2026</li></ul>
+    },
+    {
+      title: "Soprano Saxophone Digital Illustration",
+      imgurl: saxophone,
+      imgalt: "Digital illustration of a soprano saxophone",
+      images: [
+        { src: saxophone, alt: "Digital illustration of a soprano saxophone" },
+      ],
+      content: <p>This is a fully scalable soprano saxophone made in Adobe Illustrator using the blob brush and pen tool. This project was meant to be a study on reflection and how light warps on curves</p>,
+      tags: <ul className="tags"><li>Adobe Illustrator</li><li>Sept 15, 2026</li></ul>
+    },
+    {
+      title: "Luxury Watch Digital Illustration",
+      imgurl: watch,
+      imgalt: "Digital illustration of a designer watch",
+      images: [
+        { src: watch, alt: "Digital illustration of a designer watch" },
+      ],
+      content: <p>This is a fully scalable designer watch made in Adobe Illustrator using the blob brush and pen tool. A fake business watch brand was used for the purposes of the project, but this was based on a real watch.</p>,
+      tags: <ul className="tags"><li>Adobe Illustrator</li><li>Oct 4, 2026</li></ul>
     },
     {
       title: "Trash Removal Practice",
@@ -146,6 +177,7 @@ function Home() {
       content: <p>This is a project where I had to clone out dirt, scratches and folds, and extend the background, as well as remove tape with layer adjustments. Parts of the image required a higher level of repair, such as around the eye and chin. </p>,
       tags: <ul className="tags"><li>Adobe Photoshop</li><li>Apr 29, 2026</li></ul>
     },
+
     {
       title: "Pixel Art Landscape Tiles",
       imgurl: GrassPxImg,
@@ -269,6 +301,26 @@ function GraphicDesign() {
       </ul>
     },
     {
+      title: "Soprano Saxophone Digital Illustration",
+      imgurl: saxophone,
+      imgalt: "Digital illustration of a soprano saxophone",
+      images: [
+        { src: saxophone, alt: "Digital illustration of a soprano saxophone" },
+      ],
+      content: <p>This is a fully scalable soprano saxophone made in Adobe Illustrator using the blob brush and pen tool. This project was meant to be a study on reflection and how light warps on curves</p>,
+      tags: <ul className="tags"><li>Adobe Illustrator</li><li>Oct 4, 2026</li></ul>
+    },
+    {
+      title: "Luxury Watch Digital Illustration",
+      imgurl: watch,
+      imgalt: "Digital illustration of a designer watch",
+      images: [
+        { src: watch, alt: "Digital illustration of a designer watch" },
+      ],
+      content: <p>This is a fully scalable designer watch made in Adobe Illustrator using the blob brush and pen tool. A fake business watch brand was used for the purposes of the project, but this was based on a real watch.</p>,
+      tags: <ul className="tags"><li>Adobe Illustrator</li><li>Sept 15, 2026</li></ul>
+    },
+    {
       title: "Gila Monster",
       imgurl: gilaImg,
       imgalt: "Gila Monster in Adobe Illustator",
@@ -290,6 +342,7 @@ function GraphicDesign() {
       content: <p>This is a museum brochure with a die cut cover, to show a caterpillar underneath. I had to recreate the map and all the butterflies as well as arrange the text. All done in Illustrator.</p>,
       tags: <ul className="tags"><li>Adobe Illustrator</li><li>Nov 11, 2025</li></ul>
     }
+    
   ];
  
   const openDialog = (project) => {
@@ -386,6 +439,36 @@ function SchoolProjects() {
       imgalt: "Gila Monster",
       content: <p>This is a gila monster made in Adobe Illustrator using the blob brush, which took me around 25 hours of work and is 100% vectors.</p>,
       tags: <ul className="tags"><li>Adobe Illustrator</li><li>Dec 11, 2025</li></ul>
+    },
+    {
+      title: "Jewelry Retouching",
+      imgurl: jewelry,
+      imgalt: "Photos of Jewelry, before and after retouching",
+      images: [
+        { src: jewelry, alt: "Photos of Jewelry, before and after retouching" },
+      ],
+      content: <p>This is a project where I needed to remove the background and apply adjustments to each stone individually, as well as desaturating the chain metal and adding a drop shadow.</p>,
+      tags: <ul className="tags"><li>Adobe Photoshop</li><li>Oct 5, 2026</li></ul>
+    },
+    {
+      title: "Soprano Saxophone Digital Illustration",
+      imgurl: saxophone,
+      imgalt: "Digital illustration of a soprano saxophone",
+      images: [
+        { src: saxophone, alt: "Digital illustration of a soprano saxophone" },
+      ],
+      content: <p>This is a fully scalable soprano saxophone made in Adobe Illustrator using the blob brush and pen tool. This project was meant to be a study on reflection and how light warps on curves</p>,
+      tags: <ul className="tags"><li>Adobe Illustrator</li><li>Sept 15, 2026</li></ul>
+    },
+    {
+      title: "Luxury Watch Digital Illustration",
+      imgurl: watch,
+      imgalt: "Digital illustration of a designer watch",
+      images: [
+        { src: watch, alt: "Digital illustration of a designer watch" },
+      ],
+      content: <p>This is a fully scalable designer watch made in Adobe Illustrator using the blob brush and pen tool. A fake business watch brand was used for the purposes of the project, but this was based on a real watch.</p>,
+      tags: <ul className="tags"><li>Adobe Illustrator</li><li>Oct 4, 2026</li></ul>
     },
     {
       title: "Butterfly Brochure",
@@ -521,6 +604,16 @@ function PhotoRetouch() {
       ],
       content: <p>Small personal project to improve my skills at editing out objects from a scene using the clone tool.</p>,
       tags: <ul className="tags"><li>Adobe Photoshop</li><li>Apr 28, 2026</li></ul>
+    },
+    {
+      title: "Jewelry Retouching",
+      imgurl: jewelry,
+      imgalt: "Photos of Jewelry, before and after retouching",
+      images: [
+        { src: jewelry, alt: "Photos of Jewelry, before and after retouching" },
+      ],
+      content: <p>This is a project where I needed to remove the background and apply adjustments to each stone individually, as well as desaturating the chain metal and adding a drop shadow.</p>,
+      tags: <ul className="tags"><li>Adobe Photoshop</li><li>Oct 5, 2026</li></ul>
     },
     {
       title: "Restoring black and white photo",
